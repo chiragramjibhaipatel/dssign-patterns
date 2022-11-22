@@ -2,15 +2,15 @@ let Task = function (name) {
   this.name = name;
   this.completed = false;
 
-  this.complete = function () {
+};
+
+Task.prototype.complete = function () {
     console.log("completing task: " + this.name);
     this.completed = true;
-  };
+};
 
-  this.save = function () {
+Task.prototype.save = function () {
     console.log("saving task: " + this.name);
-
-  };
 };
 
 let t1 = new Task("demo for constructors");
